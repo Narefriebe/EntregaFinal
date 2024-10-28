@@ -1,0 +1,37 @@
+/* NOVEDADES */
+.novedades {
+    display: flex; /* Activa flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples filas */
+    justify-content: space-between; /* Espacio entre los elementos */
+    margin: 2%;
+
+    article {
+        
+        flex: 1 1 35%; /* Cada artículo ocupa aproximadamente el 35% del ancho del contenedor */
+        margin: 5px; /* Margen alrededor de cada artículo */
+        box-shadow: 2px 5px rgba(39, 28, 88, 0.1); 
+        padding: 12px;
+        border-radius: 3px; 
+
+        img {
+            display: block; /* lo use para centrar las imagenes */
+            max-width: 40%; 
+            height: auto;
+            margin: auto; 
+        }
+        
+        p {
+            padding: 15px; 
+            color: #14122c; 
+            font-size: 16px; 
+            line-height: 1.5;
+            text-align: center; 
+        }
+    }
+}
+
+/* Efecto al pasar el mouse sobre los artículos */
+article:hover {
+    transform: translateY(-5px); 
+    box-shadow: 8px 15px rgba(23, 14, 104, 0.2); 
+}

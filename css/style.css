@@ -1,0 +1,354 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 0%;
+  margin: 0%;
+}
+
+#body {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#header {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(186deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 55%, rgb(67, 30, 255) 80%);
+  position: relative; /* Asegúrate de que el header tenga posición relativa */
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+}
+
+#navBar {
+  max-width: 1400px;
+  height: 80px;
+  position: relative;
+  z-index: 1000;
+}
+
+.nav-link, .nav-link active {
+  color: white;
+  display: flex;
+  list-style: none;
+  padding: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  word-spacing: 60px;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  color: rgb(153, 183, 232);
+}
+
+/* Variables de color*/
+/* ESTILOS GENERALES*/
+main {
+  margin-top: 12px;
+  min-height: 100vh;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las secciones se ajusten */
+  justify-content: space-between; /* Espacio entre secciones */
+}
+.contenedor h2 {
+  color: #fefefe;
+  text-align: center;
+  margin: 2%;
+  padding: 3%;
+  font-size: 17px;
+  border: rgb(158, 12, 12);
+  background: rgb(172, 15, 15);
+}
+
+/* ESTILO GENERAL DE LAS OTRAS PAGINAS*/
+h3 {
+  color: #fefefe;
+  text-align: center;
+  margin: 2%;
+  padding: 3%;
+  font-size: 100%;
+  padding: 1.5%;
+  border: rgb(8, 6, 6);
+  background: rgb(10, 10, 10);
+}
+
+/* ESPACIO PARA CADA SECCION*/
+.ultimanov {
+  width: 60%;
+  margin-left: 2%;
+}
+
+.ultimovto {
+  width: 30%;
+  margin-right: 2%;
+  margin-top: 1%;
+}
+
+.iva, .vto {
+  display: flex;
+  align-items: center;
+  background-color: rgba(252, 252, 252, 0.9254901961);
+  padding: 10px;
+  margin: 10px; /* Márgenes verticales */
+  border: 2px solid #142269; /* Unifica la apariencia de los bordes */
+  width: 100%; /* Mantiene el ancho como está */
+}
+.iva p, .vto p {
+  text-align: justify; /* Justifica el texto */
+}
+.iva ul, .vto ul {
+  list-style-type: none;
+}
+.iva ul li, .vto ul li {
+  font-weight: bold;
+}
+
+.iva__img {
+  width: 25%; /* Ajusta el ancho de la imagen a un tamaño más pequeño */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+img {
+  max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/*ESTILOS FOOTER*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: auto;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(186deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 55%, rgb(67, 30, 255) 80%);
+}
+
+.footer__redes {
+  display: flex;
+}
+
+.footer__redes a {
+  width: 20px;
+  font-size: 24px;
+  height: 45px;
+  color: white;
+  margin: 10%;
+}
+
+h5, .footer__pya, .footer__copy {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  color: rgb(227, 225, 225);
+}
+
+.footer__copy {
+  font-size: 12px;
+}
+
+/* MEDIA PARA MOBIL*/
+@media screen and (max-width: 576px) {
+  /*HEADER*/
+  h1 {
+    font-size: 20px;
+  }
+  /*NOVEDADES*/
+  .novedades {
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+  }
+  /*CONTACTO*/
+  .contact-container {
+    flex-direction: column; /* Cambia a columna para apilar el formulario y el mapa */
+    align-items: center;
+  }
+  /*INDEX*/
+  .contenedor {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "ultimanov" "ultimovto";
+    z-index: 0;
+  }
+  .ultimanov, .ultimovto {
+    width: 80%;
+    margin: 8%;
+  }
+  /*SERVICIOS*/
+  .servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+  /*NAVEGACION*/
+  .nav-link, .navbar-nav {
+    color: rgb(27, 16, 54);
+    font-size: 12px;
+    background-color: #6570d1;
+    margin-left: 5%;
+    padding-left: 5%;
+  }
+}
+/* FORMULARIO DE CONTACTO Y EL MAPA*/
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Asegúrate de que los elementos comiencen desde arriba */
+  margin: 2%;
+  margin-left: 10%;
+  /* Estilo de los encabezados */
+  /* Estilos de los inputs y texto */
+  /* Efecto en el input y textarea al enfocar */
+  /* Estilos del botón de envío */
+  /* Efecto en el botón de envío al pasar el ratón */
+}
+.contact-container form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  max-width: 400px;
+}
+.contact-container h4 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+.contact-container input[type=text],
+.contact-container input[type=email],
+.contact-container input[type=tel],
+.contact-container textarea,
+.contact-container input[type=submit] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  margin-bottom: 15px; /* Espacio inferior común */
+}
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.contact-container input[type=submit] {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.contact-container input[type=submit]:hover {
+  background-color: #0056b3;
+}
+
+.map-container {
+  width: 55%;
+  margin-left: 20px;
+}
+
+.form__contacto {
+  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 5px; /* Ajuste del espacio entre elementos */
+}
+
+/* NOVEDADES */
+.novedades {
+  display: flex; /* Activa flexbox */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples filas */
+  justify-content: space-between; /* Espacio entre los elementos */
+  margin: 2%;
+}
+.novedades article {
+  flex: 1 1 35%; /* Cada artículo ocupa aproximadamente el 35% del ancho del contenedor */
+  margin: 5px; /* Margen alrededor de cada artículo */
+  box-shadow: 2px 5px rgba(39, 28, 88, 0.1);
+  padding: 12px;
+  border-radius: 3px;
+}
+.novedades article img {
+  display: block; /* lo use para centrar las imagenes */
+  max-width: 40%;
+  height: auto;
+  margin: auto;
+}
+.novedades article p {
+  padding: 15px;
+  color: #14122c;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Efecto al pasar el mouse sobre los artículos */
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 15px rgba(23, 14, 104, 0.2);
+}
+
+/* SERVICIOS*/
+.servicios {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2%;
+}
+
+.serv-externo, .serv-interno {
+  flex: 1; /* para que los elementos ocupen el mismo espacio */
+  margin: 10px;
+  box-shadow: 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+.serv-externo h4, .serv-interno h4 {
+  font-weight: bold;
+  color: #182152;
+  margin-bottom: 5px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+.serv-externo ol, .serv-interno ol {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/*TABLE VENCIMIENTOS*/
+.table {
+  margin: auto;
+  max-width: 80%;
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th {
+  color: rgb(191, 190, 226);
+  background-color: #4f5b99;
+  border-right: 0.5px solid #060c2a;
+  border-left: 0.5px solid #060c2a;
+}
+.table td {
+  border-right: 0.5px solid #060c2a;
+  border-left: 0.5px solid #060c2a;
+}
+.table tr {
+  text-align: center;
+  font-size: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

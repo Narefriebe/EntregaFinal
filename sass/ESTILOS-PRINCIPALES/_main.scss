@@ -1,0 +1,83 @@
+/* Variables de color*/
+$color-background: #fcfcfcec;
+$color-header-bg: rgb(172, 15, 15);
+$color-header-border: rgb(158, 12, 12);
+$color-text: #fefefe;
+
+/* ESTILOS GENERALES*/
+main {
+    margin-top: 12px;
+    min-height: 100vh;
+}
+
+.contenedor {
+    display: flex; 
+    flex-wrap: wrap; /* Permite que las secciones se ajusten */
+    justify-content: space-between; /* Espacio entre secciones */
+
+    h2 {
+        color: $color-text;
+        text-align: center;
+        margin: 2%; 
+        padding: 3%; 
+        font-size: 17px;
+        border: $color-header-border; 
+        background: $color-header-bg;
+    }
+    }
+
+/* ESTILO GENERAL DE LAS OTRAS PAGINAS*/
+h3 {
+    color: $color-text;
+    text-align: center;
+    margin: 2%; 
+    padding: 3%; 
+    font-size: 100%;
+    padding: 1.5%; 
+    border: rgb(8, 6, 6);
+    background: rgb(10, 10, 10);
+    }
+
+    /* ESPACIO PARA CADA SECCION*/
+    .ultimanov {
+        width: 60%; 
+        margin-left: 2%;
+    }
+
+    .ultimovto {
+        width: 30%; 
+        margin-right: 2%;
+        margin-top: 1%;
+    }
+
+    // Estilo para el artículo iva
+    .iva , .vto  {
+        display: flex; 
+        align-items: center; 
+        background-color: $color-background;
+        padding: 10px;
+        margin: 10px; /* Márgenes verticales */
+        border: 2px solid #142269; /* Unifica la apariencia de los bordes */
+        width: 100%; /* Mantiene el ancho como está */
+
+    p {
+        text-align: justify; /* Justifica el texto */
+    }
+    ul {
+        list-style-type: none;
+        li {
+            font-weight: bold;
+        }
+    }
+    }
+
+// Estilo para imágenes
+    .iva__img {
+        width: 25%; /* Ajusta el ancho de la imagen a un tamaño más pequeño */
+        margin-right: 10px; /* Espacio entre la imagen y el texto */
+    }
+
+    img {
+        max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }

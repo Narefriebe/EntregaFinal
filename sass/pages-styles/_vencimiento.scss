@@ -1,0 +1,21 @@
+/*TABLE VENCIMIENTOS*/
+.table {
+    margin: auto;
+    max-width: 80%; 
+    width: 100%; 
+    border-collapse: collapse;
+        th {
+            color: rgb(191, 190, 226);
+            background-color: #4f5b99;
+            border-right:0.5px solid#060c2a ;
+            border-left:0.5px solid#060c2a ;
+        }
+        td {
+            border-right:0.5px solid#060c2a ;
+            border-left:0.5px solid#060c2a ;
+        }
+        tr {
+            text-align: center;
+            font-size: 100%;
+        }
+}

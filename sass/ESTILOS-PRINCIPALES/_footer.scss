@@ -1,0 +1,35 @@
+/*ESTILOS FOOTER*/
+footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
+    font-size: 1rem; 
+    font-weight: bold;
+    margin-top: auto; 
+    background: rgb(2,0,36);
+    background: linear-gradient(186deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 55%, rgba(67,30,255,1) 80%);
+    }
+    
+    .footer__redes {
+    display: flex; 
+    }
+    
+    .footer__redes a {
+    width: 20px; 
+    font-size: 24px;
+    height: 45px; 
+    color: white;
+    margin: 10%;
+    }
+    
+    h5 , .footer__pya , .footer__copy {
+    flex-grow: 1; 
+    text-align: center; 
+    margin: 0; 
+    color: rgb(227, 225, 225); 
+    }
+    
+    .footer__copy {
+        font-size: 12px;
+    }
